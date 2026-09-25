@@ -31,7 +31,11 @@ for job in job_roles:
 
 print(jobs)
 
+# Complex - all() method and list comprehension
 
-# Complex - All method and list comprehension
+jobs = []
+for job in job_roles: 
+  if all(skill in job['skills'] for skill in my_skills):
+    jobs.append(job['role'])
 
-# for job in job_roles: 
+print(jobs)
